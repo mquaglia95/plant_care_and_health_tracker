@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Plant Tracker",
+    "slug": "plant-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "plant-tracker",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f8faf5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mquaglia95.planttracker",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Take photos of your plants to track their growth.",
+        "NSPhotoLibraryUsageDescription": "Choose photos of your plants from your library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#f8faf5"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.mquaglia95.planttracker",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#4a7c59"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose photos of your plants from your library.",
+          "cameraPermission": "Take photos of your plants to track their growth."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
